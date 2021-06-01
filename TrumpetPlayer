@@ -1,0 +1,36 @@
+import java.util.HashMap;
+
+public class TrumpetPlayer extends Artist{
+    String trumpetType;
+
+    public TrumpetPlayer() {}
+
+    public TrumpetPlayer(String trumpetType) {
+        this.trumpetType = trumpetType;
+    }
+
+/*    public String getTrumpetType() {
+        return trumpetType;
+    }
+
+    public void setTrumpetType(String trumpetType) {
+        this.trumpetType = trumpetType;
+    }*/
+
+
+        public void show(){
+            Artist artist = new Artist();
+            HashMap<String, String> trumpeter = artist.createArtist();
+            trumpeter.put("trumpetType", "Tuba");
+
+            System.out.println(
+                "----____Artist in Trumpet Player____----\n "+ "\n" +
+                "  Artist name        |" + trumpeter.get("name") + "\n" +
+                "  Artist Home Country| " + trumpeter.get("countryOrigin") + "\n" +
+                "  Artist genre       | " + trumpeter.get("genre") + "\n" +
+                "  Artist time-period | " + trumpeter.get("time_period") + "\n" +
+                "  Trumpet Type Played| " + trumpeter.get("trumpetType") + "\n"
+        );
+    }
+
+}
