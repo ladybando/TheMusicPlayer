@@ -1,6 +1,13 @@
-import java.util.HashMap;
-
 public class Artist {
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     String name;
     String countryOrigin;
     String genre;
@@ -15,24 +22,13 @@ public class Artist {
         this.time_period = artist_time_period;
     }
 
-    public HashMap<String, String> createArtist(){
-        HashMap<String, String> artist
-                = new HashMap<>();
-
-        artist.put("name", "Sevyn Streeter");
-        artist.put("countryOrigin", "USA");
-        artist.put("genre","RnB/Pop");
-        artist.put("time_period","21st Century");
-        return artist;
-    }
     public void show(){
-        HashMap<String, String> artist = createArtist();
-        System.out.println(
+       System.out.println(
                 "\n----____Artist in Artist____----\n"+
-               "  Artist name        | " + artist.get("name") + "\n" +
-               "  Artist Home Country| " + artist.get("countryOrigin") + "\n" +
-               "  Artist genre       | " + artist.get("genre") + "\n" +
-               "  Artist time-period | " + artist.get("time_period") +"\n"
+               "  Artist name        | " + name + "\n" +
+               "  Artist Home Country| " + countryOrigin + "\n" +
+               "  Artist genre       | " + genre + "\n" +
+               "  Artist time-period | " + time_period +"\n"
        );
     }
 
